@@ -662,3 +662,5 @@ iframe {
 .card-title {
   margin-bottom: 0;
 }
+
+[v-cloak] > * { display:none }
