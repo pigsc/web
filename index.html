@@ -20,9 +20,10 @@ title: Home
         <script type="text/javascript">
           const embedWidth = document.querySelector('#twitch-embed').clientWidth;
           const ratio = 0.45;
+          const height = Math.max(embedWidth * ratio, 400);
           new Twitch.Embed("twitch-embed", {
             width: '100%',
-            height: embedWidth * ratio,
+            height: height,
             channel: "x5_pig",
             autoplay: false
           });
