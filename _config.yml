@@ -1,9 +1,8 @@
 # Site
 name: "Pig"
-description: "Jekyll Template for Blogging"
-meta_description: "Jekyll template, Medium styled, free for bloggers."
+description: "Jared \"Pig\" Krensel"
+meta_description: "Jared \"Pig\" Krensel"
 logo: 'assets/images/logo_pig_400.jpg'
-favicon: 'assets/images/logo.png'
 baseurl: /pig
 google_analytics: 'UA-46278016-1'
 disqus: 'demowebsite'
