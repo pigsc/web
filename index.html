@@ -30,8 +30,9 @@ title: Home
 </section>
 
 <div class="row">
+
   <div class="col-lg-8">
-    <section class="recent-posts" id="youtube-videos" v-cloak>
+    <section class="recent-posts" data-youtube-videos data-youtube-videos-order="date" data-youtube-videos-limit="6" v-cloak>
       <div class="section-title">
         <h2><span>Latest Youtube Videos</span></h2>
       </div>
@@ -40,20 +41,20 @@ title: Home
         <div class="col-lg-6 col-md-6 mb-30px card-group" v-for="item in items">
           <div class="card h-100">
             <div class="maxthumb">
-              <a target="_blank" v-bind:href="'https://www.youtube.com/watch?v=' + item.id.videoId">
+              <a target="_blank" v-bind:href="videoUrl(item)">
                 <img class="img-fluid" v-bind:src="item.snippet.thumbnails.medium.url" alt=""/>
               </a>
             </div>
             <div class="card-body">
               <h2 class="card-title">
-                <a class="text-dark" target="_blank" v-bind:href="'https://www.youtube.com/watch?v=' + item.id.videoId" v-html="item.snippet.title">
+                <a class="text-dark" target="_blank" v-bind:href="videoUrl(item)" v-html="item.snippet.title">
                 </a>
               </h2>
             </div>
             <div class="card-footer bg-white">
               <div class="wrapfooter">
                 <span class="post-date" style="float: right" v-html="timeAgo(item.snippet.publishedAt)"></span>
-                <span class="post-date" v-if="statistics[item.id.videoId]" v-html="statistics[item.id.videoId].viewCount + ' views'">
+                <span class="post-date" v-if="statistics[item.id.videoId]" v-html="numberWithCommas(statistics[item.id.videoId].viewCount) + ' views'">
                 </span>
                 <div class="clearfix"></div>
               </div>
@@ -62,76 +63,9 @@ title: Home
         </div>
       </div>
     </section>
-
-    <script>
-      function paramsToQueryString(params) {
-        return Object.keys(params).map(function(k) { return encodeURIComponent(k) + '=' + encodeURIComponent(params[k])}).join('&');
-      }
-
-      var YoutubeAPI = new function YoutubeAPI() {
-        var self = this;
-        var apiKey = 'AIzaSyDQNjzAN3YJHjm8Hyc-x1gW3GEQIWHjdeI';
-
-        self.request = function(url, params) {
-          var queryString = paramsToQueryString(params);
-
-          return fetch(url + '?' + queryString, {
-            mode: "cors",
-            headers: {
-              "Content-Type": "application/json; charset=utf-8",
-            },
-          }).then(function(response) {
-            return response.json();
-          });
-        };
-
-        self.latestVideos = function() {
-          return self.request('https://www.googleapis.com/youtube/v3/search', {
-            key: apiKey,
-            part: 'snippet',
-            channelId: 'UC9OluGthYmZo0vsF9IjicFg',
-            type: 'video',
-            order: 'date',
-            maxResults: 6,
-          });
-        };
-
-        self.videoStats = function(videoId) {
-          return self.request('https://www.googleapis.com/youtube/v3/videos', {
-            key: apiKey,
-            id: videoId,
-            part: 'statistics',
-          });
-        };
-      };
-
-      var youtubeVideos = new Vue({
-        el: '#youtube-videos',
-        data: {
-          items: [],
-          statistics: {},
-        },
-        mounted() {
-          YoutubeAPI.latestVideos().then(function(json) {
-            youtubeVideos.items = json.items;
-            youtubeVideos.items.forEach(function(item) {
-              YoutubeAPI.videoStats(item.id.videoId).then(function(json) {
-                var statistics = json.items[0].statistics;
-                youtubeVideos.$set(youtubeVideos.statistics, item.id.videoId, statistics)
-              });
-            });
-          });
-        },
-        methods: {
-          timeAgo(time) {
-            return timeago().format(time);
-          },
-        },
-      });
-    </script>
   </div>
-  <div class="col-lg-4">
 
+  <div class="col-lg-4">
     <section class="">
       <div class="row">
         <div class="col-md-12">
@@ -143,8 +77,8 @@ title: Home
         </div>
       </div>
     </section>
-
   </div>
+
 </div>
 
 {% endif %}

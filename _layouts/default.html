@@ -63,6 +63,14 @@
             <a class="nav-link" href="{{ site.baseurl }}/">Home</a>
           </li>
 
+          {% if page.url == "/videos.html" %}
+          <li class="nav-item active">
+          {% else %}
+          <li class="nav-item">
+          {% endif %}
+            <a class="nav-link" href="{{ site.baseurl }}/videos">Videos</a>
+          </li>
+
           {% if page.url == "/about.html" %}
           <li class="nav-item active">
           {% else %}
