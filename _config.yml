@@ -6,43 +6,7 @@ logo: 'assets/images/logo_pig_400.jpg'
 baseurl: /pig
 google_analytics: 'UA-46278016-1'
 disqus: 'demowebsite'
-mailchimp-list: 'https://wowthemes.us11.list-manage.com/subscribe/post?u=8aeb20a530e124561927d3bd8&amp;id=8c3d2d214b'
-
-# Authors
-authors:
-  sal:
-    name: Sal
-    display_name: Sal
-    gravatar: e56154546cf4be74e393c62d1ae9f9d4
-    email: wowthemesnet@gmail.com
-    web: https://www.wowthemes.net
-    twitter: https://twitter.com/wowthemesnet
-    description: "Author of Mediumish, a Bootstrap Medium styled template available for WordPress, HTML, Ghost and Jekyll. You are currently previewing Jekyll template demo."
-  john:
-    name: John
-    display_name: John
-    gravatar: b1cc14991db7a456fcd761680bbc8f81
-    email: wowthemesnet@gmail.com
-    web: https://www.wowthemes.net
-    twitter: https://twitter.com/wowthemesnet
-    description: "This is the author box. Write a short description of the author here. You are currently previewing Mediumish demo, a Jekyll template compatible with Github pages."
-
-latest_youtube_videos:
-- title: Coaching Maynarde 2-1-1 into solid TvZ - Linking Macro tasks, Consistent Build Orders
-  image: https://i.ytimg.com/vi/oPzeLvWsZ0k/hqdefault.jpg?sqp=-oaymwEZCNACELwBSFXyq4qpAwsIARUAAIhCGAFwAQ==&rs=AOn4CLDdLtQBRRppR7NTVcHfY0K4wuLbtg
-  url: https://www.youtube.com/watch?v=oPzeLvWsZ0k
-  views_count: 1754
-  hours_ago: 11
-- title: TvP Coaching - Range Liberator style
-  image: https://i.ytimg.com/vi/ywP47iFbaBY/hqdefault.jpg?sqp=-oaymwEZCNACELwBSFXyq4qpAwsIARUAAIhCGAFwAQ==&rs=AOn4CLCodBYNGVLFSH7uRsa78CevQFklzg
-  url: https://www.youtube.com/watch?v=ywP47iFbaBY
-  views_count: 1318
-  hours_ago: 16
-- title: Oldschool Single Chadray into colossus disruptor PvT (Ladder VoD)
-  image: https://i.ytimg.com/vi/CRGXym62hQM/hqdefault.jpg?sqp=-oaymwEZCNACELwBSFXyq4qpAwsIARUAAIhCGAFwAQ==&rs=AOn4CLC1eX5L_rqlJhFX0Igg0sIXbvjPAQ
-  url: https://www.youtube.com/watch?v=CRGXym62hQM
-  views_count: 2622
-  hours_ago: 23
+mailchimp-list: 'https://test'
 
 # Plugins
 plugins:
