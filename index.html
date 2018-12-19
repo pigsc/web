@@ -22,7 +22,7 @@ title: Home
           width: '100%',
           height: height,
           channel: "x5_pig",
-          autoplay: false
+          autoplay: false,
         });
       </script>
     </div>
@@ -31,14 +31,14 @@ title: Home
 
 <div class="row">
 
-  <div class="col-lg-8">
-    <section class="recent-posts" data-youtube-videos data-youtube-videos-order="date" data-youtube-videos-limit="6" v-cloak>
+  <div class="col-lg-4">
+    <section class="recent-posts" data-youtube-videos data-youtube-videos-order="date" data-youtube-videos-limit="4" v-cloak>
       <div class="section-title">
         <h2><span>Latest Youtube Videos</span></h2>
       </div>
 
       <div class="row listrecent">
-        <div class="col-lg-6 col-md-6 mb-30px card-group" v-for="item in items">
+        <div class="col-lg-12 col-md-12 mb-30px card-group" v-for="item in items">
           <div class="card h-100">
             <div class="maxthumb">
               <a target="_blank" v-bind:href="videoUrl(item)">
@@ -74,6 +74,36 @@ title: Home
           </div>
           <a class="twitter-timeline" href="https://twitter.com/x5_PiG?ref_src=twsrc%5Etfw" data-tweet-limit="5" data-chrome="nofooter noborders noheader">Tweets by x5_PiG</a>
           <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <div class="col-lg-4">
+    <section class="">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="section-title">
+            <h2><span>Instagram</span></h2>
+          </div>
+          <div id="instafeed" class="row"></div>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/instafeed.js/1.4.1/instafeed.min.js"></script>
+          <script type="text/javascript">
+            Instafeed.prototype._makeTemplate = function(template, data) {
+              return '<div class="col-sm-12 mb-3"><a href="' + data.link + '"><img style="width: 100%" src="' + data.image + '" alt="' + data.caption + '" /></a>' + data.caption + '</div>';
+            };
+            var feed = new Instafeed({
+              get: 'user',
+              userId: '361283079',
+              clientId: '88cc30b609e743089b67a5551738761f',
+              accessToken: '361283079.88cc30b.66a552cb7d404679bc27d1e912e8e69a',
+              template: '', // defined in _makeTemplate
+              resolution: 'standard_resolution',
+              limit: 5,
+            });
+            feed.run();
+          </script>
+
         </div>
       </div>
     </section>
