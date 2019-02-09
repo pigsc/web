@@ -664,3 +664,35 @@ iframe {
 }
 
 [v-cloak] > * { display:none }
+
+
+.newsletter form {
+  margin-top:20px;
+  margin-bottom: 40px;
+}
+.newsletter span, .newsletter form {
+  display: block;
+}
+
+.newsletter input[type="email"] {
+  padding:6px 5px 4px 10px;
+  border-top-left-radius:3px;
+  border-bottom-left-radius:3px;
+  border:1px solid #ddd;
+  border-right:0;
+  margin-right:-10px;
+  height: 40px;
+}
+.newsletter input[type="submit"] {
+  background-color:#1C9963;
+  border:1px solid #1C9963;
+  color:rgba(255,255,255,1);
+  fill:rgba(255,255,255,1);
+  border-radius:0;
+  padding:4px 10px;
+  border-top-right-radius:3px;
+  border-bottom-right-radius:3px;
+  font-weight:600;
+  cursor: pointer;
+  height: 40px;
+}

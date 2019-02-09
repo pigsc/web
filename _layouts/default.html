@@ -79,6 +79,14 @@
             <a class="nav-link" href="{{ site.baseurl }}/coaching">Coaching</a>
           </li>
 
+          {% if page.url == "/newsletter.html" %}
+          <li class="nav-item active">
+          {% else %}
+          <li class="nav-item">
+          {% endif %}
+            <a class="nav-link" href="{{ site.baseurl }}/newsletter">Newsletter</a>
+          </li>
+
           {% if page.url == "/about.html" %}
           <li class="nav-item active">
           {% else %}
@@ -110,6 +118,7 @@
         {{ content }}
       </div>
 
+      {% if page.url != "/newsletter.html" %}
       <div class="alertbar">
         <div class="container text-center">
           <span>
@@ -124,6 +133,7 @@
           </form>
         </div>
       </div>
+      {% endif %}
     </div>
 
     <footer class="footer">
