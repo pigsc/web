@@ -3,8 +3,8 @@ name: "Pig"
 description: "Jared \"Pig\" Krensel"
 meta_description: "Jared \"Pig\" Krensel"
 logo: 'assets/images/logo_pig_400.jpg'
-baseurl: 
-google_analytics: 'UA-46278016-1'
+baseurl:
+google_analytics: 'UA-134184194-1'
 disqus: 'demowebsite'
 mailchimp-list: 'https://test'
 
