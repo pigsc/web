@@ -670,7 +670,7 @@ iframe {
   margin-top:20px;
   margin-bottom: 40px;
 }
-.newsletter span, .newsletter form {
+.newsletter form {
   display: block;
 }
 
@@ -695,4 +695,8 @@ iframe {
   font-weight:600;
   cursor: pointer;
   height: 40px;
+}
+
+.newsletter .section-title h2 {
+  font-size: 1.2rem;
 }
