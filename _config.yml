@@ -1,7 +1,6 @@
 # Site
 name: Pig
 description: 'Jared "Pig" Krensel'
-meta_description: 'Jared "Pig" Krensel'
 logo: assets/images/logo_pig_400.jpg
 baseurl:
 google_analytics: UA-134184194-1
@@ -31,23 +30,5 @@ content:
       - name: January 2019
         link: https://us20.campaign-archive.com/?u=b976cc10453777e768e7f0fa8&id=0021fa1baf
 
-# Plugins
-plugins:
-  - jekyll-paginate
-  - jekyll-archives
-
-# Archives
-jekyll-archives:
-  enabled:
-    - categories
-  layout: archive
-  permalinks:
-    category: '/category/:name/'
-
-# Pagination
-paginate: 6
-paginate_path: /page:num/
-
-# Other
 markdown: kramdown
 highlighter: rouge
