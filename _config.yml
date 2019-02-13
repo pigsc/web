@@ -1,17 +1,35 @@
 # Site
-name: "Pig"
-description: "Jared \"Pig\" Krensel"
-meta_description: "Jared \"Pig\" Krensel"
-logo: 'assets/images/logo_pig_400.jpg'
+name: Pig
+description: 'Jared "Pig" Krensel'
+meta_description: 'Jared "Pig" Krensel'
+logo: assets/images/logo_pig_400.jpg
 baseurl:
-google_analytics: 'UA-134184194-1'
-disqus: 'pigstarcraft'
-mailchimp_list: 'https://gmail.us20.list-manage.com/subscribe/post?u=b976cc10453777e768e7f0fa8&amp;id=cada359caa'
-newsletter:
-  description: Too busy to keep up with all my content? Subscribe for a monthly newsletter with all the best videos, clips and posts to stay up to date with all things PiG!
-  previous_issues:
-    - name: January 2019
-      link: https://us20.campaign-archive.com/?u=b976cc10453777e768e7f0fa8&id=0021fa1baf
+google_analytics: UA-134184194-1
+mailchimp_list: https://gmail.us20.list-manage.com/subscribe/post?u=b976cc10453777e768e7f0fa8&amp;id=cada359caa
+
+content:
+  about:
+    description:
+      - >
+        My name's Jared 'PiG' Krensel, I'm a Professional Starcraft II player, commentator, coach and streamer
+        from Sydney, Australia.
+      - >
+        In recent months I've decided to stream on Twitch Full-time and am having a lot of fun improving the quality
+        of the stream and finding new ways to have fun and entertain my audience. Sometimes I travel to commentate or
+        compete in Starcraft Tournaments but I always try to stream as soon as I get home.
+  coaching:
+    description:
+      - >
+        Email [pigrandom88@gmail.com](mailto:pigrandom88@gmail.com) for more info! My rate is currently $70USD/Hour.
+        Purchase 4 hours upfront and get 1 free!
+  newsletter:
+    description:
+      - >
+        Too busy to keep up with all my content? Subscribe for a monthly newsletter with all the best videos,
+        clips and posts to stay up to date with all things PiG!
+    previous_issues:
+      - name: January 2019
+        link: https://us20.campaign-archive.com/?u=b976cc10453777e768e7f0fa8&id=0021fa1baf
 
 # Plugins
 plugins:

@@ -9,9 +9,11 @@ title: Home
     <div class="section-title">
       <h2><span>Coaching</span></h2>
     </div>
+    {% for paragraph in site.content.coaching.description %}
     <p>
-      Email <a href="mailto:pigrandom88@gmail.com">pigrandom88@gmail.com</a> for more info! My rate is currently $70USD/Hour. Purchase 4 hours upfront and get 1 free!
+      {{ paragraph | markdownify }}
     </p>
+    {% endfor %}
   </div>
   </div>
 

@@ -5,9 +5,11 @@ title: Monthly Newsletter
 
 <div class="row">
   <div class="col-md-8 flex-first flex-md-unordered newsletter">
+    {% for paragraph in site.content.about.description %}
     <p>
-      {{ site.newsletter.description }}
+      {{ paragraph | markdownify }}
     </p>
+    {% endfor %}
 
     <form action="{{ site.mailchimp_list }}" method="post" name="mc-embedded-subscribe-form" class="wj-contact-form validate" target="_blank" novalidate>
       <div class="mc-field-group">
@@ -23,7 +25,7 @@ title: Monthly Newsletter
     </div>
 
     <ul>
-      {% for previous_issue in site.newsletter.previous_issues %}
+      {% for previous_issue in site.content.newsletter.previous_issues %}
       <li>
         <a href="{{ previous_issue.link }}">{{ previous_issue.name }}</a>
       </li>

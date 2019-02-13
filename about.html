@@ -8,13 +8,11 @@ title: About me
 	<div class="row">
 
 		<div class="col-md-8 flex-first flex-md-unordered">
+      {% for paragraph in site.content.about.description %}
 			<p>
-				My name's Jared 'PiG' Krensel, I'm a Professional Starcraft II player, commentator, coach and streamer from Sydney, Australia.
+				{{ paragraph | markdownify }}
 			</p>
-
-			<p>
-				In recent months I've decided to stream on Twitch Full-time and am having a lot of fun improving the quality of the stream and finding new ways to have fun and entertain my audience. Sometimes I travel to commentate or compete in Starcraft Tournaments but I always try to stream as soon as I get home.
-			</p>
+			{% endfor %}
 		</div>
 
 		<div class="col-md-4 flex-first flex-md-unordered">
