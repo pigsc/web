@@ -37,6 +37,12 @@ title: Home
         <h2><span>Latest Youtube Videos</span></h2>
       </div>
 
+      <div class="row listrecent" v-if="items.length == 0">
+        <div class="col-sm-12">
+          <p>Loading videos...</p>
+        </div>
+      </div>
+
       <div class="row listrecent">
         <div class="col-lg-12 col-md-12 mb-30px card-group" v-for="item in items">
           <div class="card h-100">
