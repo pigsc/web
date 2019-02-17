@@ -1,6 +1,6 @@
 # Site
-name: Pig
-description: 'Jared "Pig" Krensel'
+name: PiG
+description: 'Jared "PiG" Krensel'
 logo: assets/images/logo_pig_400.jpg
 baseurl:
 google_analytics: UA-134184194-1
@@ -22,6 +22,9 @@ content:
         Email [pigrandom88@gmail.com](mailto:pigrandom88@gmail.com) for more info! My rate is currently $85USD/Hour.
         Purchase 4 hours upfront and get 1 free!
   newsletter:
+    popup: >
+      Too busy to keep up with all my content? Subscribe for a monthly newsletter with all the best content
+      to stay up to date with all things PiG!
     description:
       - >
         Too busy to keep up with all my content? Subscribe for a monthly newsletter with all the best videos,
