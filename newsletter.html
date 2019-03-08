@@ -27,7 +27,7 @@ title: Monthly Newsletter
     <ul>
       {% for previous_issue in site.content.newsletter.previous_issues %}
       <li>
-        <a href="{{ previous_issue.link }}">{{ previous_issue.name }}</a>
+        <a href="{{ site.content.newsletter.archive_url }}" target="_blank">Archive</a>
       </li>
       {% endfor %}
     </ul>
